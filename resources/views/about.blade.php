@@ -60,4 +60,36 @@
             </div>
         </div>
     </section>
+    <section class="page-section" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Experience</h2>
+                <h3 class="section-subheading text-muted">I have knowledge on these things</h3>
+            </div>
+            <div class="container">
+                <div class="row text-center">
+                    @foreach($technologies as $technology)
+                    <div class="col-md-4">
+                        <h2><a href="{{ route('about') }}?technology_id={{ $technology->id }}">{{ $technology->name }}</a></h2>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+            <div class="container">
+                <div class="row text-center">
+                    @foreach($portfolios as $portfolio)
+                        <div class="card col-md-12 m-4">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $portfolio->title }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{{ $portfolio->title }}</h6>
+                                <p class="card-text">{{ $portfolio->portfolio_text }}</p>
+                                <a href="#" class="card-link">Test Link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection
