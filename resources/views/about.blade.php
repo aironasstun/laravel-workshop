@@ -83,8 +83,7 @@
                                 <h5 class="card-title">{{ $portfolio->title }}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">{{ $portfolio->title }}</h6>
                                 <p class="card-text">{{ $portfolio->portfolio_text }}</p>
-                                <a href="#" class="card-link">Test Link</a>
-                                <a href="#" class="card-link">Another link</a>
+                                <a href="{{ route('portfolios.show', $portfolio->id) }}" class="card-link">Link...</a>
                             </div>
                         </div>
                     @endforeach

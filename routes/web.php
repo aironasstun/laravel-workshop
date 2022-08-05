@@ -18,3 +18,6 @@ Route::view('/','index')->name('home');
 Route::get('/about',[\App\Http\Controllers\AboutController::class, 'experience'])
     ->name('about');
 Route::view('/contact','contact')->name('contact');
+
+Route::get('portfolios/{portfolio}',
+    [\App\Http\Controllers\PortfolioController::class, 'show'])->name('portfolios.show');
